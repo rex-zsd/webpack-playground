@@ -1,0 +1,69 @@
+{
+  "name": "webpack-playground",
+  "version": "1.0.0",
+  "description": "webpack 脚手架",
+  "main": "index.js",
+  "scripts": {
+    "start": "better-npm-run dev",
+    "launch": "better-npm-run launch",
+    "prod": "better-npm-run prod"
+  },
+  "betterScripts": {
+    "dev": {
+      "command": "webpack-dev-server --config webpack.config.dev.js",
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 9000,
+        "HTTPS": false
+      }
+    },
+    "launch": {
+      "command": "webpack --config ./webpack.config.prod.js",
+      "env": {
+        "NODE_ENV": "launch"
+      }
+    },
+    "prod": {
+      "command": "webpack --config ./webpack.config.prod.js",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rex-zsd/webpack-playground.git"
+  },
+  "author": "rex-zsd",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/rex-zsd/webpack-playground/issues"
+  },
+  "homepage": "https://github.com/rex-zsd/webpack-playground#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.0",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "better-npm-run": "0.0.14",
+    "clean-webpack-plugin": "^0.1.15",
+    "css-loader": "^0.26.1",
+    "expose-loader": "^0.7.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.5",
+    "html-webpack-inline-source-plugin": "0.0.6",
+    "html-webpack-plugin": "^2.26.0",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "postcss-loader": "^1.2.2",
+    "style-loader": "^0.13.1",
+    "vue-loader": "^10.0.3",
+    "vue-template-compiler": "^2.1.10",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0",
+    "webpack-merge": "^2.4.0"
+  },
+  "dependencies": {
+    "vue": "^2.1.10"
+  }
+}
